@@ -4,7 +4,7 @@
 
 **Hệ thống SIEM ứng dụng AI tự động phân tích tấn công theo mô hình Cyber Kill Chain**
 
-Đồ án môn **Giám sát An ninh Mạng (GSANM)**
+Đề tài môn **Giám sát An ninh Mạng (GSANM)**
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8-F7931E?logo=scikitlearn&logoColor=white)
@@ -348,7 +348,7 @@ Khi một session đạt giai đoạn **Exploitation trở lên**, hệ thống 
 **Kết quả:** 251 / 2.280 session kích hoạt phản ứng (93 CRITICAL · 2 HIGH · 156 MEDIUM).
 
 > [!NOTE]
-> **Toàn bộ là SIMULATION.** Dataset là log lịch sử, IP là IP nội bộ lab không tồn tại ngoài đời, và đồ án không có hạ tầng TheHive / firewall / Telegram thật. `ResponseExecutor` chỉ ghi payload ra `output/response_actions.json`, **không** gọi `subprocess` hay HTTP. Vì payload khớp format API thật, có thể nối vào hạ tầng thật chỉ bằng cách thay thân hàm `ResponseExecutor.run`.
+> **Toàn bộ là SIMULATION.** Dataset là log lịch sử, IP là IP nội bộ lab không tồn tại ngoài đời, và đề tài không có hạ tầng TheHive / firewall / Telegram thật. `ResponseExecutor` chỉ ghi payload ra `output/response_actions.json`, **không** gọi `subprocess` hay HTTP. Vì payload khớp format API thật, có thể nối vào hạ tầng thật chỉ bằng cách thay thân hàm `ResponseExecutor.run`.
 
 ---
 
@@ -474,6 +474,6 @@ killchain-siem-ai/
 
 <div align="center">
 
-**Đồ án môn Giám sát An ninh Mạng** · Dataset: [AIT-ADS](https://zenodo.org/record/8263181) (Austrian Institute of Technology)
+**Đề tài môn Giám sát An ninh Mạng** · Dataset: [AIT-ADS](https://zenodo.org/record/8263181) (Austrian Institute of Technology)
 
 </div>
