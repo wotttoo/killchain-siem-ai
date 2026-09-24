@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+alert-data-set-main/
+output/*.pkl
+.claude/
+*.md
+*.html
+*.docx
+!README.md
