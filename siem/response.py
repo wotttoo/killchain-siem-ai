@@ -21,6 +21,7 @@ from .killchain import KillChain
 class ResponsePlaybook:
     """Sinh 3 hành động phản ứng cho 1 attack session đã trigger."""
 
+    # Thang severity 1-4 của TheHive
     SEVERITY_MAP = {"LOW": 1, "MEDIUM": 2, "HIGH": 3, "CRITICAL": 4}
 
     def __init__(self, kill_chain=KillChain):
@@ -34,9 +35,11 @@ class ResponsePlaybook:
         return self.kc.phase_rank(phase) >= self.kc.phase_rank(self.kc.EXPLOITATION)
 
     def iptables_command(self, session):
+        """Lệnh chặn toàn bộ traffic từ IP nguồn của session (chỉ sinh chuỗi, không chạy)."""
         return f"iptables -A INPUT -s {session['source_ip']} -j DROP"
 
     def thehive_case(self, session):
+        """Payload tạo case/alert trên TheHive, đúng các trường của API thật."""
         phases = (" → ".join(session["phases_pred"]) if session["phases_pred"]
                   else session["max_phase_pred"])
         return {
@@ -53,6 +56,7 @@ class ResponsePlaybook:
         }
 
     def notification_text(self, session):
+        """Nội dung tin nhắn cảnh báo gửi qua Telegram/Email."""
         phases = " → ".join(session["phases_pred"]) if session["phases_pred"] else "N/A"
         start = datetime.datetime.utcfromtimestamp(session["start_time"]).strftime("%Y-%m-%d %H:%M:%S")
         return (
@@ -66,6 +70,7 @@ class ResponsePlaybook:
         )
 
     def build(self, session):
+        """Gộp 3 hành động phản ứng của 1 session thành 1 bản ghi."""
         return {
             "session_id": session["session_id"],
             "scenario": session["scenario"],
@@ -90,6 +95,7 @@ class ResponseExecutor:
         self.actions = []
 
     def run(self, sessions, verbose=True):
+        """Sinh playbook cho các session đủ điều kiện và đánh dấu simulated=True; không thực thi gì thật."""
         actions = []
         for s in sessions:
             if not self.playbook.should_trigger(s):
@@ -106,4 +112,5 @@ class ResponseExecutor:
         return actions
 
     def summary(self):
+        """Đếm số response action theo risk_level."""
         return dict(Counter(a["risk_level"] for a in self.actions))

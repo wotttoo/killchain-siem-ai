@@ -14,6 +14,8 @@ from .risk import RiskScorer
 
 
 class SessionBuilder:
+    """Chia alert của mỗi IP thành các session (cắt khi IP im lặng > session_gap) và tóm tắt tiến trình Kill Chain."""
+
     def __init__(self, session_gap=1800, min_alerts=2, kill_chain=KillChain, risk_scorer=None):
         self.session_gap = session_gap    # giây — tạo session mới nếu IP im lặng lâu hơn
         self.min_alerts = min_alerts      # bỏ qua session có ít hơn N alert (noise)
@@ -28,12 +30,14 @@ class SessionBuilder:
             t = grp["time"].values
             n = len(grp)
 
+            # Tìm các điểm cắt: khoảng cách giữa 2 alert liên tiếp > session_gap → session mới
             cuts = [0]
             for i in range(1, n):
                 if t[i] - t[i - 1] > self.session_gap:
                     cuts.append(i)
             cuts.append(n)
 
+            # Mỗi đoạn giữa 2 điểm cắt là 1 session
             for k in range(len(cuts) - 1):
                 seg = grp.iloc[cuts[k]:cuts[k + 1]]
                 if len(seg) < self.min_alerts:
@@ -54,9 +58,13 @@ class SessionBuilder:
         return sessions
 
     def _build_one(self, seg, ip, scenario_name, pred_col, gt_col):
+        """Tóm tắt 1 đoạn alert thành session dict (thông tin chung + tiến trình Kill Chain dự đoán + ground truth)."""
+        # Ground truth: các phase tấn công thật sự có trong session (bỏ Benign)
         gt_phases = seg[gt_col].unique().tolist()
         attack_phases_gt = set(gt_phases) - {self.kc.BENIGN}
 
+        # Duyệt alert theo thời gian; lần đầu gặp 1 phase dự đoán thì ghi lại
+        # thời điểm xuất hiện, tổng số alert và mã alert phổ biến nhất của phase đó
         kc_progress = []
         seen = set()
         for _, row in seg.iterrows():
@@ -71,6 +79,7 @@ class SessionBuilder:
                     "top_alert": (str(phase_rows["short"].value_counts().index[0])
                                   if len(phase_rows) > 0 else ""),
                 })
+        # Sắp theo thứ tự Kill Chain (không phải theo thời gian) để dễ đọc
         kc_progress.sort(key=lambda p: self.kc.phase_rank(p["phase"]))
 
         t_start = int(seg["time"].min())
@@ -91,6 +100,7 @@ class SessionBuilder:
 
     def finalize(self, session, min_phase_alerts):
         """Áp MIN_PHASE_ALERTS lên kill_chain_progress raw, ghi đè phases_pred/risk/... vào session."""
+        # Phase có quá ít alert coi như nhiễu (1-2 alert bị model gán nhầm), không tính
         kept = [p for p in session["kill_chain_progress"] if p["alert_count"] >= min_phase_alerts]
         attack_phases_pred = {p["phase"] for p in kept}
 
@@ -101,6 +111,7 @@ class SessionBuilder:
         return session
 
     def finalize_all(self, sessions, min_phase_alerts):
+        """Gọi finalize cho toàn bộ session (sửa trực tiếp trên list)."""
         for session in sessions:
             self.finalize(session, min_phase_alerts)
         return sessions
@@ -117,6 +128,7 @@ class SessionThresholdTuner:
 
     @staticmethod
     def _binary_metrics(sessions):
+        """Session có ≥1 phase tấn công = 'tấn công'; so với ground truth để ra TP/FP/FN."""
         tp = fp = fn = 0
         for s in sessions:
             has_pred = len(s["phases_pred"]) > 0

@@ -1,7 +1,7 @@
 """
 siem — thư viện dùng chung cho pipeline SIEM AI Kill Chain Detection.
 
-Các script 01-04 ở thư mục gốc chỉ orchestrate (gọi các class dưới đây theo
+Các script 01-05 ở thư mục gốc chỉ orchestrate (gọi các class dưới đây theo
 đúng thứ tự); toàn bộ logic nghiệp vụ (load data, feature engineering, model,
 session building, risk scoring, evaluation) sống trong package này để không
 lặp lại code giữa các bước của pipeline.

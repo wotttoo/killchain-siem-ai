@@ -5,7 +5,7 @@ Nhóm alert theo IP + time window → attack session → Kill Chain timeline
 Toàn bộ logic nghiệp vụ sống trong package `siem/`; script này chỉ
 orchestrate theo đúng thứ tự và in kết quả. Xem `siem/model.py` (threshold
 tuning cấp alert) và `siem/session.py` (session building + threshold cấp
-session) cho chi tiết 2 quyết định threshold đã chốt (CLAUDE.md).
+session) cho chi tiết 2 quyết định threshold đã chốt (README.md).
 """
 
 import json
@@ -22,8 +22,10 @@ warnings.filterwarnings("ignore")
 
 
 class CorrelationEnginePipeline:
+    """Orchestrator: dự đoán alert → tune threshold → gom session → chấm risk → đánh giá → lưu JSON/CSV."""
+
     def __init__(self, data_dir, output_dir, test_scenarios,
-                 session_gap=1800, min_alerts=2,
+                 session_gap=1800, min_alerts=2,      # 1800 giây = 30 phút im lặng thì cắt session
                  threshold_grid=(0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90),
                  min_phase_alerts_grid=(1, 2, 3, 5, 10, 20)):
         self.data_dir = data_dir
@@ -33,6 +35,7 @@ class CorrelationEnginePipeline:
         self.min_phase_alerts_grid = list(min_phase_alerts_grid)
 
         self.loader = AlertDataLoader(data_dir)
+        # Dùng lại encoder + model RF v2 đã train ở bước 01
         self.feature_engineer = FeatureEngineer().load_encoders(output_dir)
         self.predictor = ThresholdedPredictor.from_path(
             f"{output_dir}/model_rf_v2.pkl", FeatureEngineer.FEATURES
@@ -80,6 +83,7 @@ class CorrelationEnginePipeline:
         print("\n" + "=" * 60)
         print("3b. THRESHOLD TUNING (trên test scenarios: fox, harrison)")
         print("=" * 60)
+        # Chỉ tune trên test scenarios (fox, harrison)
         is_test = self.data["scenario"].isin(self.test_scenarios).values
         proba_test = proba[is_test]
         gt_test = self.data.loc[is_test, "gt_phase"].values
@@ -90,6 +94,7 @@ class CorrelationEnginePipeline:
         print(f"\n[Chosen] threshold={self.best_alert_threshold:.2f} "
               f"(best F1={best['f1']:.3f} on alert-level, test scenarios)")
 
+        # Áp threshold tốt nhất cho toàn bộ alert của 8 scenario
         self.data["pred_phase"] = self.predictor.apply_threshold(
             proba, classes, self.best_alert_threshold
         )
@@ -115,6 +120,7 @@ class CorrelationEnginePipeline:
         print(f"\n[Chosen] min_phase_alerts={self.best_min_phase_alerts} "
               f"(best F1={best['f1']:.3f} on session-level, test scenarios)")
 
+        # Áp MIN_PHASE_ALERTS đã chọn → điền phases_pred, risk_score, risk_level cho mọi session
         self.session_builder.finalize_all(sessions, self.best_min_phase_alerts)
         self.sessions = sessions
         self.df_sess = pd.DataFrame(sessions)
@@ -168,6 +174,7 @@ class CorrelationEnginePipeline:
         print("8. ĐÁNH GIÁ CORRELATION ENGINE")
         print("=" * 60)
         df = self.df_sess
+        # Session được coi là "tấn công" nếu có ít nhất 1 phase tấn công
         has_pred = df["phases_pred"].apply(len) > 0
         has_gt = df["phases_gt"].apply(len) > 0
 
@@ -183,6 +190,7 @@ class CorrelationEnginePipeline:
             metrics_test,
         )
 
+        # Trong các session thật sự đi qua ≥ 2 phase, bao nhiêu session được dự đoán multi-phase
         gt_multi = df[df["phases_gt"].apply(lambda x: len(x) >= 2)]
         if len(gt_multi) > 0:
             recall = gt_multi["is_multi_phase"].sum() / len(gt_multi)
@@ -210,12 +218,14 @@ class CorrelationEnginePipeline:
             json.dump(danger, f, ensure_ascii=False, indent=2)
         print(f"[Saved] {danger_path}  ({len(danger)} HIGH/CRITICAL sessions)")
 
+        # Bản CSV bỏ các cột dạng list để mở được bằng Excel
         summary_path = f"{self.output_dir}/sessions_summary.csv"
         self.df_sess.drop(columns=["kill_chain_progress", "phases_pred", "phases_gt"],
                            errors="ignore").to_csv(summary_path, index=False)
         print(f"[Saved] {summary_path}")
 
     def run(self):
+        """Chạy toàn bộ bước 2 theo thứ tự."""
         self.load_and_engineer()
         self.tune_alert_threshold()
         self.build_sessions()

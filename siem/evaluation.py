@@ -14,6 +14,8 @@ class SessionEvaluator:
         has_pred_attack / has_gt_attack: pandas Series bool cùng index.
         Trả về dict TP/FP/FN/TN + precision/recall/F1.
         """
+        # TP: dự đoán tấn công và đúng là tấn công | FP: báo nhầm
+        # FN: bỏ sót tấn công                     | TN: đúng là bình thường
         tp = int((has_pred_attack & has_gt_attack).sum())
         fp = int((has_pred_attack & ~has_gt_attack).sum())
         fn = int((~has_pred_attack & has_gt_attack).sum())
@@ -25,6 +27,7 @@ class SessionEvaluator:
 
     @classmethod
     def from_dataframe(cls, df, pred_col="has_pred_attack", gt_col="has_gt_attack"):
+        """Như binary_metrics nhưng lấy 2 cột bool trực tiếp từ DataFrame session."""
         return cls.binary_metrics(df[pred_col], df[gt_col])
 
     @staticmethod

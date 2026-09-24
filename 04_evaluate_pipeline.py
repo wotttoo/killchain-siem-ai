@@ -30,6 +30,8 @@ warnings.filterwarnings("ignore")
 
 
 class PipelineEvaluator:
+    """Orchestrator đánh giá end-to-end: cấp alert → cấp session → theo scenario → giá trị vận hành → latency."""
+
     def __init__(self, data_dir, output_dir, test_scenarios,
                  alert_threshold=0.75, min_phase_alerts=3):
         self.data_dir = data_dir
@@ -72,6 +74,7 @@ class PipelineEvaluator:
         print("=" * 60)
         proba, classes = self.predictor.predict_proba(self.data)
         pred = self.predictor.apply_threshold(proba, classes, self.alert_threshold)
+        # Đếm số alert mà argmax nói "tấn công" nhưng bị threshold hạ về Benign
         argmax_pred = classes[proba.argmax(axis=1)]
         low_conf_count = int(((argmax_pred != "Benign") & (pred == "Benign")).sum())
         self.data["pred_phase"] = pred
@@ -146,6 +149,7 @@ class PipelineEvaluator:
               f"Pred đúng multi-phase={int(gt_multi['is_multi_phase'].sum())}  "
               f"Recall={self.multi_phase_recall:.3f}")
 
+        # Phase agreement: trong các session phát hiện đúng, phase cao nhất dự đoán có khớp thực tế không
         tp_sessions = df[df["has_pred_attack"] & df["has_gt_attack"]]
         self.phase_agreement = (
             (tp_sessions["max_phase_pred"] == tp_sessions["max_phase_gt"]).mean()
@@ -198,6 +202,7 @@ class PipelineEvaluator:
         print("\n" + "=" * 60)
         print("7. OPERATIONAL VALUE — ALERT REDUCTION")
         print("=" * 60)
+        # Hệ thống giảm tải cho SOC bao nhiêu lần so với việc xem từng alert thô
         n_alerts = len(self.data)
         n_sessions = len(self.df_sess)
         n_high_crit = int(self.df_sess["risk_level"].isin(["CRITICAL", "HIGH"]).sum())
@@ -221,9 +226,11 @@ class PipelineEvaluator:
             has_gt = len(s["phases_gt"]) > 0
             if not (has_pred and has_gt) or not s["kill_chain_progress"]:
                 continue
+            # Latency = từ lúc session bắt đầu tới lúc alert tấn công đầu tiên được model nhận ra
             first_seen_vals = [p["first_seen"] for p in s["kill_chain_progress"]]
             self.latencies.append((min(first_seen_vals) - s["start_time"]) / 60)
 
+            # Với session multi-phase: bao lâu thì tấn công leo tới phase cao nhất
             if s["is_multi_phase"]:
                 max_phase_entry = next(
                     (p for p in s["kill_chain_progress"] if p["phase"] == s["max_phase_pred"]),
@@ -288,6 +295,7 @@ class PipelineEvaluator:
         print(f"[Saved] {path}")
 
     def run(self):
+        """Chạy toàn bộ bước 4 theo thứ tự."""
         self.load_and_predict()
         self.evaluate_alert_level()
         self.load_sessions()

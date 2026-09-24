@@ -62,6 +62,8 @@ class EDATrainPipeline:
         print("\n" + "=" * 60)
         print("3. TRAIN / TEST SPLIT")
         print("=" * 60)
+        # Chia theo scenario, KHÔNG chia ngẫu nhiên: IP nội bộ lặp lại trong cùng scenario,
+        # chia ngẫu nhiên sẽ cho accuracy ảo ~99%. Test = fox + harrison (chưa từng thấy lúc train).
         self.train = self.data[~self.data["scenario"].isin(self.test_scenarios)]
         self.test = self.data[self.data["scenario"].isin(self.test_scenarios)]
         print(f"Train: {len(self.train):,}  |  Test: {len(self.test):,}")
@@ -70,6 +72,7 @@ class EDATrainPipeline:
         return self.train, self.test
 
     def _xy(self, split_df):
+        """Tách feature (X) và nhãn Kill Chain (y)."""
         return split_df[FeatureEngineer.FEATURES], split_df["gt_phase"]
 
     # ── 4. RANDOM FOREST ─────────────────────────────────────────────
@@ -80,6 +83,7 @@ class EDATrainPipeline:
         X_train, y_train = self._xy(self.train)
         X_test, y_test = self._xy(self.test)
 
+        # Đây là dự đoán argmax thường (chưa áp threshold) — threshold được tune ở bước 02
         rf = self.trainer.train_random_forest(X_train, y_train)
         self.y_pred_rf = rf.predict(X_test)
 
@@ -121,6 +125,7 @@ class EDATrainPipeline:
             (axes[0], self.y_pred_rf, "Random Forest v2"),
             (axes[1], self.y_pred_xgb, "XGBoost v2"),
         ]:
+            # normalize="true": mỗi hàng chia cho tổng hàng → đọc được recall của từng lớp
             cm = confusion_matrix(y_test, y_pred, labels=classes, normalize="true")
             disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=classes)
             disp.plot(ax=ax, colorbar=False, cmap="Blues", values_format=".2f")
@@ -151,6 +156,7 @@ class EDATrainPipeline:
         print(f"Models saved to '{self.output_dir}/'")
 
     def run(self):
+        """Chạy toàn bộ bước 1 theo thứ tự."""
         self.load_and_engineer()
         self.split()
         self.train_random_forest()

@@ -20,11 +20,13 @@ def _load_sessions(path):
     with open(path, encoding="utf-8") as f:
         sessions = json.load(f)
     df = pd.DataFrame(sessions)
+    # Thêm vài cột phụ để hiển thị / lọc / đánh giá cho tiện
     df["phases_pred_str"] = df["phases_pred"].apply(lambda x: " → ".join(x) if x else "—")
     df["phases_gt_str"] = df["phases_gt"].apply(lambda x: " → ".join(x) if x else "—")
     df["is_attack_pred"] = df["phases_pred"].apply(len) > 0
     df["is_attack_gt"] = df["phases_gt"].apply(len) > 0
     df["start_dt"] = pd.to_datetime(df["start_time"], unit="s")
+    # Categorical có thứ tự để chart và bảng sắp BENIGN → CRITICAL thay vì theo alphabet
     df["risk_level"] = pd.Categorical(
         df["risk_level"], categories=KillChainDashboardApp.RISK_ORDER, ordered=True
     )
@@ -66,11 +68,13 @@ class KillChainDashboardApp:
         except FileNotFoundError:
             st.error(f"Không tìm thấy `{self.SESSIONS_PATH}`. Chạy `python3 02_correlation_engine.py` trước.")
             st.stop()
+        # Tra cứu nhanh session gốc (đủ kill_chain_progress) khi xem chi tiết
         self.sessions_by_id = {s["session_id"]: s for s in self.sessions_raw}
         self.df = self.df_all  # bị thu hẹp bởi render_sidebar()
 
     # ── SIDEBAR — FILTERS ────────────────────────────────────────────
     def render_sidebar(self):
+        """Vẽ bộ lọc ở sidebar và thu hẹp self.df theo lựa chọn của người dùng."""
         st.sidebar.header("Bộ lọc")
 
         scenarios = sorted(self.df_all["scenario"].unique().tolist())
@@ -94,6 +98,7 @@ class KillChainDashboardApp:
 
     # ── HEADER + KPI ──────────────────────────────────────────────────
     def render_header_and_kpis(self):
+        """Tiêu đề + 5 chỉ số tổng quan (tính trên dữ liệu đã lọc)."""
         st.title("🛡️ SIEM AI — Kill Chain Dashboard")
         st.caption("Attack session được dựng từ alert bằng Correlation Engine (RF v2 + threshold tuning)")
 
@@ -108,6 +113,7 @@ class KillChainDashboardApp:
 
     # ── CHARTS ────────────────────────────────────────────────────────
     def _bar_layout(self, fig, yaxis_title, showlegend=False):
+        """Style chung cho các bar chart."""
         fig.update_layout(
             showlegend=showlegend, xaxis_title=None, yaxis_title=yaxis_title,
             plot_bgcolor="#fcfcfb", paper_bgcolor="#fcfcfb",
@@ -117,6 +123,7 @@ class KillChainDashboardApp:
         return fig
 
     def render_charts(self):
+        """3 biểu đồ: phân bố risk level, phase cao nhất, session theo scenario."""
         df = self.df
         c1, c2 = st.columns(2)
 
@@ -162,6 +169,7 @@ class KillChainDashboardApp:
 
     # ── SESSION TABLE ─────────────────────────────────────────────────
     def render_table(self):
+        """Bảng session sắp theo risk_score giảm dần, đổi tên cột sang tiếng Việt."""
         st.subheader("Danh sách Attack Session")
         table_cols = [
             "session_id", "scenario", "source_ip", "start_dt", "duration_min",
@@ -180,6 +188,7 @@ class KillChainDashboardApp:
 
     # ── SESSION DETAIL — KILL CHAIN TIMELINE ─────────────────────────
     def _render_timeline_chart(self, sess):
+        """Timeline: trục X = phút kể từ đầu session, trục Y = phase; mỗi điểm = lần đầu phase xuất hiện."""
         kc = sess["kill_chain_progress"]
         if not kc:
             st.info("Session này không có phase attack nào được model phát hiện.")
@@ -221,6 +230,7 @@ class KillChainDashboardApp:
         st.plotly_chart(fig, width='stretch')
 
     def render_detail(self):
+        """Chi tiết 1 session được chọn: chỉ số, badge risk, timeline, so sánh predicted với ground truth."""
         st.subheader("Chi tiết Session — Kill Chain Timeline")
 
         if len(self.df) == 0:
@@ -263,6 +273,7 @@ class KillChainDashboardApp:
 
     # ── MODEL EVALUATION (tính động trên phạm vi được chọn) ──────────
     def render_evaluation(self):
+        """Precision/Recall/F1 cấp session, tính lại theo phạm vi người dùng chọn."""
         st.subheader("Đánh giá Correlation Engine")
 
         eval_scope = st.radio(
@@ -294,10 +305,11 @@ class KillChainDashboardApp:
             "**Đã biết:** phần lớn false positive còn lại là session bị gắn nhầm "
             "phase Reconnaissance, do 2 alert code `W-All-Evt` / `W-Acc-Cms` mà model "
             "học sai association ở train scenarios — giới hạn generalization của model "
-            "gốc, không phải lỗi threshold. Xem `CLAUDE.md` mục 'Vấn đề còn tồn tại'."
+            "gốc, không phải lỗi threshold. Xem mục 'Hạn chế' trong `README.md`."
         )
 
     def run(self):
+        """Vẽ dashboard từ trên xuống; sidebar chạy trước để các phần sau dùng dữ liệu đã lọc."""
         self.render_sidebar()
         self.render_header_and_kpis()
         self.render_charts()

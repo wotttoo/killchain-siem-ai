@@ -15,6 +15,8 @@ from siem import KillChain, ResponsePlaybook, ResponseExecutor
 
 
 class ResponsePipeline:
+    """Orchestrator: đọc session → chạy playbook (mô phỏng) → thống kê → lưu response_actions.json."""
+
     def __init__(self, output_dir):
         self.output_dir = output_dir
         self.sessions = None
@@ -36,6 +38,7 @@ class ResponsePipeline:
         print("=" * 60)
         eligible = [s for s in self.sessions if s.get("max_phase_pred")]
         print(f"Session có phase tấn công: {len(eligible):,} / {len(self.sessions):,}")
+        # Executor tự lọc: chỉ session có phase cao nhất từ Exploitation trở lên mới sinh playbook
         actions = self.executor.run(self.sessions)
         print(f"\nTổng số session trigger response (>= Exploitation): {len(actions):,}")
         return actions
@@ -70,6 +73,7 @@ class ResponsePipeline:
         print(f"[Saved] {out_path}  ({len(self.executor.actions):,} actions)")
 
     def run(self):
+        """Chạy toàn bộ bước 5 theo thứ tự."""
         self.load_sessions()
         self.run_playbooks()
         self.print_summary()

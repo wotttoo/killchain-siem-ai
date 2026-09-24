@@ -16,12 +16,16 @@ class RiskScorer:
         self.kc = kill_chain
 
     def score(self, attack_phases, alert_count):
+        """Tính risk_score 0-100 từ tập phase tấn công của session."""
         if not attack_phases:
             return 0
 
+        # Điểm nền = phase nguy hiểm nhất (Recon 15, Exploit 50, Install 75, Actions 90)
         base = max(self.kc.PHASE_RISK.get(p, 0) for p in attack_phases)
+        # +10 cho mỗi phase thêm vào
         multi_bonus = (len(attack_phases) - 1) * 10
 
+        # Thưởng khi tấn công tiến triển qua nhiều giai đoạn Kill Chain
         ordered = [p for p in self.kc.PHASE_ORDER if p in attack_phases]
         progression_bonus = 0
         if len(ordered) >= 2:
@@ -31,11 +35,13 @@ class RiskScorer:
         if len(ordered) >= 4:
             progression_bonus = 35
 
+        # +1 mỗi 10.000 alert, tối đa +5
         volume_bonus = min(5, alert_count // 10000)
 
         return min(100, base + multi_bonus + progression_bonus + volume_bonus)
 
     def level(self, score):
+        """Đổi điểm số sang mức: CRITICAL ≥ 80, HIGH ≥ 60, MEDIUM ≥ 30, LOW > 0, BENIGN = 0."""
         if score <= 0:
             return "BENIGN"
         for threshold, label in self.LEVELS:
@@ -45,10 +51,12 @@ class RiskScorer:
 
     @staticmethod
     def status(score):
+        """ACTIVE = cần xử lý (điểm ≥ 50), MONITORED = chỉ theo dõi."""
         return "ACTIVE" if score >= 50 else "MONITORED"
 
     @staticmethod
     def recommended_action(score, ip):
+        """Hành động đề xuất cho SOC tương ứng với mức rủi ro."""
         if score >= 80:
             return f"ISOLATE host + BLOCK {ip}"
         if score >= 60:
