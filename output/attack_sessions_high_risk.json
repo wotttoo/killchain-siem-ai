@@ -1,0 +1,2887 @@
+[
+  {
+    "session_id": "harrison-192.168.131.215-1644304580",
+    "scenario": "harrison",
+    "source_ip": "192.168.131.215",
+    "start_time": 1644304580,
+    "end_time": 1644309428,
+    "duration_min": 80.8,
+    "alert_count": 424864,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1644304594,
+        "alert_count": 423451,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1644309398,
+        "alert_count": 32,
+        "top_alert": "A-Aud-Com6"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1644306991,
+        "alert_count": 4,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.131.215"
+  },
+  {
+    "session_id": "russellmitchell-10.143.2.4-1642996607",
+    "scenario": "russellmitchell",
+    "source_ip": "10.143.2.4",
+    "start_time": 1642996607,
+    "end_time": 1642996788,
+    "duration_min": 3.0,
+    "alert_count": 10894,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642996621,
+        "alert_count": 10850,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1642996607,
+        "alert_count": 37,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1642996754,
+        "alert_count": 3,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.143.2.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642745068",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642745068,
+    "end_time": 1642749626,
+    "duration_min": 76.0,
+    "alert_count": 216,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642746620,
+        "alert_count": 192,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642751976",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642751976,
+    "end_time": 1642778878,
+    "duration_min": 448.4,
+    "alert_count": 1348,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642751976,
+        "alert_count": 1260,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642781271",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642781271,
+    "end_time": 1642792948,
+    "duration_min": 194.6,
+    "alert_count": 480,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642781770,
+        "alert_count": 456,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642795752",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642795752,
+    "end_time": 1642797379,
+    "duration_min": 27.1,
+    "alert_count": 9,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642797379,
+        "alert_count": 3,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642828333",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642828333,
+    "end_time": 1642850410,
+    "duration_min": 367.9,
+    "alert_count": 786,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642830139,
+        "alert_count": 741,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642852308",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642852308,
+    "end_time": 1642871796,
+    "duration_min": 324.8,
+    "alert_count": 1002,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642852308,
+        "alert_count": 966,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642874490",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642874490,
+    "end_time": 1642875416,
+    "duration_min": 15.4,
+    "alert_count": 18,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642874490,
+        "alert_count": 12,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642915219",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642915219,
+    "end_time": 1642948269,
+    "duration_min": 550.8,
+    "alert_count": 1653,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642917017,
+        "alert_count": 1587,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642950300",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642950300,
+    "end_time": 1642959686,
+    "duration_min": 156.4,
+    "alert_count": 434,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642950300,
+        "alert_count": 405,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642962546",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642962546,
+    "end_time": 1642966377,
+    "duration_min": 63.9,
+    "alert_count": 141,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642963067,
+        "alert_count": 129,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1642969635",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1642969635,
+    "end_time": 1642970184,
+    "duration_min": 9.2,
+    "alert_count": 24,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642969635,
+        "alert_count": 18,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1643005989",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1643005989,
+    "end_time": 1643049452,
+    "duration_min": 724.4,
+    "alert_count": 1998,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643006559,
+        "alert_count": 1716,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1643053052",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1643053052,
+    "end_time": 1643056693,
+    "duration_min": 60.7,
+    "alert_count": 144,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643053160,
+        "alert_count": 132,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.4-1643060269",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.4",
+    "start_time": 1643060269,
+    "end_time": 1643061431,
+    "duration_min": 19.4,
+    "alert_count": 69,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643060269,
+        "alert_count": 63,
+        "top_alert": "W-Sys-Dov"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.4"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642743327",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642743327,
+    "end_time": 1642743474,
+    "duration_min": 2.5,
+    "alert_count": 36,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642743327,
+        "alert_count": 17,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642746614",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642746614,
+    "end_time": 1642749375,
+    "duration_min": 46.0,
+    "alert_count": 70,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642747378,
+        "alert_count": 2,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642747054,
+        "alert_count": 56,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642751976",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642751976,
+    "end_time": 1642772783,
+    "duration_min": 346.8,
+    "alert_count": 436,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642754385,
+        "alert_count": 1,
+        "top_alert": "A-Acc-Val2"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642751976,
+        "alert_count": 427,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642775608",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642775608,
+    "end_time": 1642779726,
+    "duration_min": 68.6,
+    "alert_count": 137,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642777038,
+        "alert_count": 1,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642775608,
+        "alert_count": 136,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642782836",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642782836,
+    "end_time": 1642785593,
+    "duration_min": 46.0,
+    "alert_count": 48,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642782836,
+        "alert_count": 46,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642788547",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642788547,
+    "end_time": 1642794956,
+    "duration_min": 106.8,
+    "alert_count": 160,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642788547,
+        "alert_count": 160,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642797711",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642797711,
+    "end_time": 1642797711,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642797711,
+        "alert_count": 8,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642825407",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642825407,
+    "end_time": 1642825408,
+    "duration_min": 0.0,
+    "alert_count": 14,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642825407,
+        "alert_count": 6,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642830139",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642830139,
+    "end_time": 1642834968,
+    "duration_min": 80.5,
+    "alert_count": 90,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642832712,
+        "alert_count": 2,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642830139,
+        "alert_count": 88,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642838263",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642838263,
+    "end_time": 1642847098,
+    "duration_min": 147.2,
+    "alert_count": 256,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642838263,
+        "alert_count": 254,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642849767",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642849767,
+    "end_time": 1642849767,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642849767,
+        "alert_count": 8,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642851602",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642851602,
+    "end_time": 1642851670,
+    "duration_min": 1.1,
+    "alert_count": 16,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642851602,
+        "alert_count": 16,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642853498",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642853498,
+    "end_time": 1642858504,
+    "duration_min": 83.4,
+    "alert_count": 144,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642853498,
+        "alert_count": 143,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642860706",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642860706,
+    "end_time": 1642870275,
+    "duration_min": 159.5,
+    "alert_count": 352,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642860706,
+        "alert_count": 349,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642874484",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642874484,
+    "end_time": 1642874484,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642874484,
+        "alert_count": 8,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642901134",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642901134,
+    "end_time": 1642901134,
+    "duration_min": 0.0,
+    "alert_count": 10,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642901134,
+        "alert_count": 4,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642917033",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642917033,
+    "end_time": 1642950332,
+    "duration_min": 555.0,
+    "alert_count": 712,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642917033,
+        "alert_count": 710,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642952267",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642952267,
+    "end_time": 1642960189,
+    "duration_min": 132.0,
+    "alert_count": 248,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642952267,
+        "alert_count": 248,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642963068",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642963068,
+    "end_time": 1642964675,
+    "duration_min": 26.8,
+    "alert_count": 32,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642963068,
+        "alert_count": 32,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642970586",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642970586,
+    "end_time": 1642970586,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642970586,
+        "alert_count": 8,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1642996613",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1642996613,
+    "end_time": 1642996638,
+    "duration_min": 0.4,
+    "alert_count": 111,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642996613,
+        "alert_count": 103,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642996621,
+        "alert_count": 5,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance"
+    ],
+    "max_phase_gt": "Reconnaissance",
+    "phases_pred": [
+      "Reconnaissance",
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1643006554",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1643006554,
+    "end_time": 1643008537,
+    "duration_min": 33.0,
+    "alert_count": 17,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643006554,
+        "alert_count": 16,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1643011218",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1643011218,
+    "end_time": 1643047901,
+    "duration_min": 611.4,
+    "alert_count": 1354,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643011218,
+        "alert_count": 1341,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "russellmitchell-172.19.130.68-1643053351",
+    "scenario": "russellmitchell",
+    "source_ip": "172.19.130.68",
+    "start_time": 1643053351,
+    "end_time": 1643057649,
+    "duration_min": 71.6,
+    "alert_count": 41,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643053351,
+        "alert_count": 40,
+        "top_alert": "W-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.19.130.68"
+  },
+  {
+    "session_id": "santos-10.229.0.32-1642226902",
+    "scenario": "santos",
+    "source_ip": "10.229.0.32",
+    "start_time": 1642226902,
+    "end_time": 1642240511,
+    "duration_min": 226.8,
+    "alert_count": 602,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642236413,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.0.32"
+  },
+  {
+    "session_id": "santos-10.229.0.32-1642242902",
+    "scenario": "santos",
+    "source_ip": "10.229.0.32",
+    "start_time": 1642242902,
+    "end_time": 1642251589,
+    "duration_min": 144.8,
+    "alert_count": 234,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642242906,
+        "alert_count": 10,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.0.32"
+  },
+  {
+    "session_id": "santos-10.229.0.32-1642317912",
+    "scenario": "santos",
+    "source_ip": "10.229.0.32",
+    "start_time": 1642317912,
+    "end_time": 1642319146,
+    "duration_min": 20.6,
+    "alert_count": 40,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642318140,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.0.32"
+  },
+  {
+    "session_id": "santos-10.229.0.32-1642345131",
+    "scenario": "santos",
+    "source_ip": "10.229.0.32",
+    "start_time": 1642345131,
+    "end_time": 1642351868,
+    "duration_min": 112.3,
+    "alert_count": 284,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642351582,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.0.32"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642138781",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642138781,
+    "end_time": 1642172827,
+    "duration_min": 567.4,
+    "alert_count": 2222,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642152933,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642180658",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642180658,
+    "end_time": 1642182046,
+    "duration_min": 23.1,
+    "alert_count": 82,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642180662,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642225247",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642225247,
+    "end_time": 1642237173,
+    "duration_min": 198.8,
+    "alert_count": 496,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642230001,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642239647",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642239647,
+    "end_time": 1642258126,
+    "duration_min": 308.0,
+    "alert_count": 1185,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642249173,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642311574",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642311574,
+    "end_time": 1642344508,
+    "duration_min": 548.9,
+    "alert_count": 2170,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642317766,
+        "alert_count": 10,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-10.229.2.25-1642425154",
+    "scenario": "santos",
+    "source_ip": "10.229.2.25",
+    "start_time": 1642425154,
+    "end_time": 1642452455,
+    "duration_min": 455.0,
+    "alert_count": 1447,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642427790,
+        "alert_count": 21,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.229.2.25"
+  },
+  {
+    "session_id": "santos-192.168.104.155-1642418492",
+    "scenario": "santos",
+    "source_ip": "192.168.104.155",
+    "start_time": 1642418492,
+    "end_time": 1642418685,
+    "duration_min": 3.2,
+    "alert_count": 11101,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642418506,
+        "alert_count": 11043,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1642418492,
+        "alert_count": 49,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1642418654,
+        "alert_count": 3,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.104.155"
+  },
+  {
+    "session_id": "shaw-192.168.188.179-1643088014",
+    "scenario": "shaw",
+    "source_ip": "192.168.188.179",
+    "start_time": 1643088014,
+    "end_time": 1643088795,
+    "duration_min": 13.0,
+    "alert_count": 29,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1643088014,
+        "alert_count": 5,
+        "top_alert": "A-Acc-Val1"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1643088014,
+        "alert_count": 3,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1643088014,
+        "alert_count": 3,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.188.179"
+  },
+  {
+    "session_id": "shaw-192.168.188.179-1643467132",
+    "scenario": "shaw",
+    "source_ip": "192.168.188.179",
+    "start_time": 1643467132,
+    "end_time": 1643467228,
+    "duration_min": 1.6,
+    "alert_count": 6003,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1643467132,
+        "alert_count": 5936,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1643467133,
+        "alert_count": 33,
+        "top_alert": "A-All-Evt"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1643467196,
+        "alert_count": 3,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.188.179"
+  },
+  {
+    "session_id": "wardbeck-10.132.56.1-1642574224",
+    "scenario": "wardbeck",
+    "source_ip": "10.132.56.1",
+    "start_time": 1642574224,
+    "end_time": 1642585381,
+    "duration_min": 185.9,
+    "alert_count": 1767,
+    "kill_chain_progress": [
+      {
+        "phase": "Exploitation",
+        "first_seen": 1642582055,
+        "alert_count": 10,
+        "top_alert": "S-Flw-Apt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642580718,
+        "alert_count": 4,
+        "top_alert": "A-Dns-Frq"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Exploitation",
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.132.56.1"
+  },
+  {
+    "session_id": "wardbeck-10.132.56.1-1642664224",
+    "scenario": "wardbeck",
+    "source_ip": "10.132.56.1",
+    "start_time": 1642664224,
+    "end_time": 1642677556,
+    "duration_min": 222.2,
+    "alert_count": 921,
+    "kill_chain_progress": [
+      {
+        "phase": "Exploitation",
+        "first_seen": 1642665273,
+        "alert_count": 14,
+        "top_alert": "S-Flw-Apt"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642668450,
+        "alert_count": 4,
+        "top_alert": "A-Dns-Frq"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Exploitation",
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.132.56.1"
+  },
+  {
+    "session_id": "wardbeck-10.132.56.1-1642714461",
+    "scenario": "wardbeck",
+    "source_ip": "10.132.56.1",
+    "start_time": 1642714461,
+    "end_time": 1642720272,
+    "duration_min": 96.8,
+    "alert_count": 245,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1642717872,
+        "alert_count": 4,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.132.56.1"
+  },
+  {
+    "session_id": "wardbeck-172.21.241.88-1642939861",
+    "scenario": "wardbeck",
+    "source_ip": "172.21.241.88",
+    "start_time": 1642939861,
+    "end_time": 1642940054,
+    "duration_min": 3.2,
+    "alert_count": 6046,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1642939875,
+        "alert_count": 5994,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1642939861,
+        "alert_count": 34,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation"
+    ],
+    "max_phase_pred": "Exploitation",
+    "is_multi_phase": true,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "status": "ACTIVE",
+    "recommended_action": "BLOCK source IP 172.21.241.88"
+  },
+  {
+    "session_id": "wheeler-172.27.183.254-1643155207",
+    "scenario": "wheeler",
+    "source_ip": "172.27.183.254",
+    "start_time": 1643155207,
+    "end_time": 1643185684,
+    "duration_min": 507.9,
+    "alert_count": 168,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643155818,
+        "alert_count": 4,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.27.183.254"
+  },
+  {
+    "session_id": "wheeler-172.27.183.254-1643434845",
+    "scenario": "wheeler",
+    "source_ip": "172.27.183.254",
+    "start_time": 1643434845,
+    "end_time": 1643436122,
+    "duration_min": 21.3,
+    "alert_count": 4,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643434845,
+        "alert_count": 3,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.27.183.254"
+  },
+  {
+    "session_id": "wheeler-172.27.183.254-1643496608",
+    "scenario": "wheeler",
+    "source_ip": "172.27.183.254",
+    "start_time": 1643496608,
+    "end_time": 1643523908,
+    "duration_min": 455.0,
+    "alert_count": 52,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643496608,
+        "alert_count": 36,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.27.183.254"
+  },
+  {
+    "session_id": "wheeler-172.27.183.254-1643581321",
+    "scenario": "wheeler",
+    "source_ip": "172.27.183.254",
+    "start_time": 1643581321,
+    "end_time": 1643582437,
+    "duration_min": 18.6,
+    "alert_count": 3,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643581321,
+        "alert_count": 3,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.27.183.254"
+  },
+  {
+    "session_id": "wheeler-172.27.183.254-1643584594",
+    "scenario": "wheeler",
+    "source_ip": "172.27.183.254",
+    "start_time": 1643584594,
+    "end_time": 1643586855,
+    "duration_min": 37.7,
+    "alert_count": 7,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643584594,
+        "alert_count": 5,
+        "top_alert": "A-Dns-Clc1"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.27.183.254"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643178552",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643178552,
+    "end_time": 1643179600,
+    "duration_min": 17.5,
+    "alert_count": 43,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1643179597,
+        "alert_count": 2,
+        "top_alert": "W-Acc-Cms"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1643178552,
+        "alert_count": 7,
+        "top_alert": "A-Aud-Com6"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643179590,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Exploitation",
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643186084",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643186084,
+    "end_time": 1643186084,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643186084,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643193498",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643193498,
+    "end_time": 1643193498,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643193498,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643204049",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643204049,
+    "end_time": 1643209043,
+    "duration_min": 83.2,
+    "alert_count": 14,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1643205230,
+        "alert_count": 1,
+        "top_alert": "A-Acc-Val2"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643204049,
+        "alert_count": 6,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643225304",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643225304,
+    "end_time": 1643226631,
+    "duration_min": 22.1,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643225304,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643262633",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643262633,
+    "end_time": 1643262633,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643262633,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643290816",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643290816,
+    "end_time": 1643291812,
+    "duration_min": 16.6,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643290816,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643369741",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643369741,
+    "end_time": 1643370442,
+    "duration_min": 11.7,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643369741,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643377516",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643377516,
+    "end_time": 1643378407,
+    "duration_min": 14.8,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643377516,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643384126",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643384126,
+    "end_time": 1643384766,
+    "duration_min": 10.7,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643384126,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643435594",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643435594,
+    "end_time": 1643435594,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643435594,
+        "alert_count": 4,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643474043",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643474043,
+    "end_time": 1643475266,
+    "duration_min": 20.4,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643474043,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643492092",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643492092,
+    "end_time": 1643493505,
+    "duration_min": 23.6,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643492092,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643523254",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643523254,
+    "end_time": 1643524874,
+    "duration_min": 27.0,
+    "alert_count": 16,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643523254,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wheeler-192.168.2.114-1643549868",
+    "scenario": "wheeler",
+    "source_ip": "192.168.2.114",
+    "start_time": 1643549868,
+    "end_time": 1643551338,
+    "duration_min": 24.5,
+    "alert_count": 6,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643549868,
+        "alert_count": 3,
+        "top_alert": "S-Dns-Qry3"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 192.168.2.114"
+  },
+  {
+    "session_id": "wilson-10.182.192.1-1644226679",
+    "scenario": "wilson",
+    "source_ip": "10.182.192.1",
+    "start_time": 1644226679,
+    "end_time": 1644232379,
+    "duration_min": 95.0,
+    "alert_count": 600,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1644231573,
+        "alert_count": 3,
+        "top_alert": "S-Flw-Nmp"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1644230759,
+        "alert_count": 6,
+        "top_alert": "S-Flw-Apt"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance"
+    ],
+    "max_phase_gt": "Reconnaissance",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation"
+    ],
+    "max_phase_pred": "Exploitation",
+    "is_multi_phase": true,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "status": "ACTIVE",
+    "recommended_action": "BLOCK source IP 10.182.192.1"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1643863587",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1643863587,
+    "end_time": 1643921536,
+    "duration_min": 965.8,
+    "alert_count": 4742,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643892151,
+        "alert_count": 15,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1643950477",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1643950477,
+    "end_time": 1644006545,
+    "duration_min": 934.5,
+    "alert_count": 4889,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643968225,
+        "alert_count": 10,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1644040947",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1644040947,
+    "end_time": 1644095310,
+    "duration_min": 906.0,
+    "alert_count": 4643,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644055956,
+        "alert_count": 10,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1644124251",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1644124251,
+    "end_time": 1644176885,
+    "duration_min": 877.2,
+    "alert_count": 5264,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644146719,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1644211968",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1644211968,
+    "end_time": 1644264341,
+    "duration_min": 872.9,
+    "alert_count": 3781,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1644231566,
+        "alert_count": 26,
+        "top_alert": "W-All-Ids"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644229583,
+        "alert_count": 15,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1644298039",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1644298039,
+    "end_time": 1644298988,
+    "duration_min": 15.8,
+    "alert_count": 78,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644298043,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.181-1644301377",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.181",
+    "start_time": 1644301377,
+    "end_time": 1644347732,
+    "duration_min": 772.6,
+    "alert_count": 4316,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1644320584,
+        "alert_count": 1,
+        "top_alert": "W-All-Ids"
+      },
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644307432,
+        "alert_count": 5,
+        "top_alert": "W-Mai-Inv"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.181"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1643846559",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1643846559,
+    "end_time": 1643846559,
+    "duration_min": 0.0,
+    "alert_count": 12,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643846559,
+        "alert_count": 12,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1643864701",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1643864701,
+    "end_time": 1643864702,
+    "duration_min": 0.0,
+    "alert_count": 8,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1643864701,
+        "alert_count": 8,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644082154",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644082154,
+    "end_time": 1644090033,
+    "duration_min": 131.3,
+    "alert_count": 191,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644089883,
+        "alert_count": 7,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644145976",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644145976,
+    "end_time": 1644146351,
+    "duration_min": 6.2,
+    "alert_count": 69,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644145976,
+        "alert_count": 5,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_gt": "Actions_on_Objectives",
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644221457",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644221457,
+    "end_time": 1644224076,
+    "duration_min": 43.6,
+    "alert_count": 67,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644224076,
+        "alert_count": 3,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644259529",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644259529,
+    "end_time": 1644259604,
+    "duration_min": 1.2,
+    "alert_count": 5,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644259529,
+        "alert_count": 5,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644314068",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644314068,
+    "end_time": 1644322399,
+    "duration_min": 138.8,
+    "alert_count": 863,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644319023,
+        "alert_count": 5,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644340002",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644340002,
+    "end_time": 1644340152,
+    "duration_min": 2.5,
+    "alert_count": 7,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644340002,
+        "alert_count": 7,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-10.182.193.78-1644350126",
+    "scenario": "wilson",
+    "source_ip": "10.182.193.78",
+    "start_time": 1644350126,
+    "end_time": 1644350276,
+    "duration_min": 2.5,
+    "alert_count": 7,
+    "kill_chain_progress": [
+      {
+        "phase": "Actions_on_Objectives",
+        "first_seen": 1644350126,
+        "alert_count": 7,
+        "top_alert": "A-All-Evt"
+      }
+    ],
+    "phases_gt": [],
+    "max_phase_gt": null,
+    "phases_pred": [
+      "Actions_on_Objectives"
+    ],
+    "max_phase_pred": "Actions_on_Objectives",
+    "is_multi_phase": false,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 10.182.193.78"
+  },
+  {
+    "session_id": "wilson-172.26.243.167-1644229039",
+    "scenario": "wilson",
+    "source_ip": "172.26.243.167",
+    "start_time": 1644229039,
+    "end_time": 1644234641,
+    "duration_min": 93.4,
+    "alert_count": 434694,
+    "kill_chain_progress": [
+      {
+        "phase": "Reconnaissance",
+        "first_seen": 1644231573,
+        "alert_count": 433308,
+        "top_alert": "W-Acc-400"
+      },
+      {
+        "phase": "Exploitation",
+        "first_seen": 1644234498,
+        "alert_count": 16,
+        "top_alert": "W-Aut-Pam1"
+      },
+      {
+        "phase": "Installation",
+        "first_seen": 1644232837,
+        "alert_count": 4,
+        "top_alert": "A-Acc-Ent2"
+      }
+    ],
+    "phases_gt": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_gt": "Installation",
+    "phases_pred": [
+      "Reconnaissance",
+      "Exploitation",
+      "Installation"
+    ],
+    "max_phase_pred": "Installation",
+    "is_multi_phase": true,
+    "risk_score": 100,
+    "risk_level": "CRITICAL",
+    "status": "ACTIVE",
+    "recommended_action": "ISOLATE host + BLOCK 172.26.243.167"
+  }
+]
